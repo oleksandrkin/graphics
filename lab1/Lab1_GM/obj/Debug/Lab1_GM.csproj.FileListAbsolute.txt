@@ -1,0 +1,9 @@
+D:\Study\TestProjects\Lab1_GM\Lab1_GM\bin\Debug\Lab1_GM.exe.config
+D:\Study\TestProjects\Lab1_GM\Lab1_GM\obj\Debug\Lab1_GM.csprojResolveAssemblyReference.cache
+D:\Study\TestProjects\Lab1_GM\Lab1_GM\obj\Debug\Lab1_GM.Form1.resources
+D:\Study\TestProjects\Lab1_GM\Lab1_GM\obj\Debug\Lab1_GM.Properties.Resources.resources
+D:\Study\TestProjects\Lab1_GM\Lab1_GM\obj\Debug\Lab1_GM.csproj.GenerateResource.Cache
+D:\Study\TestProjects\Lab1_GM\Lab1_GM\bin\Debug\Lab1_GM.exe
+D:\Study\TestProjects\Lab1_GM\Lab1_GM\bin\Debug\Lab1_GM.pdb
+D:\Study\TestProjects\Lab1_GM\Lab1_GM\obj\Debug\Lab1_GM.exe
+D:\Study\TestProjects\Lab1_GM\Lab1_GM\obj\Debug\Lab1_GM.pdb
