@@ -1,0 +1,6 @@
+C:\Users\olexanderkin\CompatibL_extra\lab6\lab6\bin\Debug\lab6.exe.config
+C:\Users\olexanderkin\CompatibL_extra\lab6\lab6\bin\Debug\lab6.exe
+C:\Users\olexanderkin\CompatibL_extra\lab6\lab6\bin\Debug\lab6.pdb
+C:\Users\olexanderkin\CompatibL_extra\lab6\lab6\obj\Debug\lab6.csprojResolveAssemblyReference.cache
+C:\Users\olexanderkin\CompatibL_extra\lab6\lab6\obj\Debug\lab6.exe
+C:\Users\olexanderkin\CompatibL_extra\lab6\lab6\obj\Debug\lab6.pdb
