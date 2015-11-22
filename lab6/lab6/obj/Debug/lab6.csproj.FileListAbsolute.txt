@@ -4,3 +4,9 @@ C:\Users\olexanderkin\CompatibL_extra\lab6\lab6\bin\Debug\lab6.pdb
 C:\Users\olexanderkin\CompatibL_extra\lab6\lab6\obj\Debug\lab6.csprojResolveAssemblyReference.cache
 C:\Users\olexanderkin\CompatibL_extra\lab6\lab6\obj\Debug\lab6.exe
 C:\Users\olexanderkin\CompatibL_extra\lab6\lab6\obj\Debug\lab6.pdb
+D:\Repositories\Graphics\lab6\lab6\bin\Debug\lab6.exe.config
+D:\Repositories\Graphics\lab6\lab6\obj\Debug\lab6.csprojResolveAssemblyReference.cache
+D:\Repositories\Graphics\lab6\lab6\bin\Debug\lab6.exe
+D:\Repositories\Graphics\lab6\lab6\bin\Debug\lab6.pdb
+D:\Repositories\Graphics\lab6\lab6\obj\Debug\lab6.exe
+D:\Repositories\Graphics\lab6\lab6\obj\Debug\lab6.pdb

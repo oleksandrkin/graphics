@@ -7,14 +7,10 @@ namespace lab6
     {
         static float X = 0.0f;		
         static float Y = 0.0f;		
-        static float Z = 0.0f;		
-        static float rotX = 0.0f;	
-        static float rotY = 0.0f;	
-        static float rotZ = 0.0f;	
-
-        static float rotLx = 0.0f;   
-        static float rotLy = 0.0f;   
-        static float rotLz = 0.0f;   
+        static float Z = 0.0f;
+        static float rotX = 15f;
+        static float rotY = 15f;
+        static float rotZ = 15f;	
 
         static bool lines = true;      
         static bool rotation = false;   // Rotate if F2 is pressed   
@@ -75,60 +71,52 @@ namespace lab6
             Gl.glColor3f(1.0f, 1.0f, 1.0f);
 
             // 1 - 2
-            Gl.glVertex3f(5f, 0f, 4f);
-            Gl.glVertex3f(5f, -3f, 0f);
+            Gl.glVertex3f(0f, 6f, 0f);
+            Gl.glVertex3f(6f, 6f, 0f);
 
             // 1 - 3
-            Gl.glVertex3f(5f, 0f, 4f);
-            Gl.glVertex3f(5f, 3f, 0f);
+            //Gl.glVertex3f(0f, 6f, 0f);
+            //Gl.glVertex3f(0f, 0f, 0f);
 
-            // 1 - 5
-            Gl.glVertex3f(5f, 0f, 4f);
-            Gl.glVertex3f(-5f, 0f, 4f);
+            // 1 - 4
+            Gl.glVertex3f(0f, 6f, 0f);
+            Gl.glVertex3f(0f, 6f, 8f);
 
             // 2 - 3
-            Gl.glVertex3f(5f, -3f, 0f);
-            Gl.glVertex3f(5f, 3f, 0f);
+            //Gl.glVertex3f(6f, 6f, 0f);
+            //Gl.glVertex3f(0f, 0f, 0f);
 
-            // 2 - 4
-            Gl.glVertex3f(5f, -3f, 0f);
-            Gl.glVertex3f(5f, 0f, -4f);
+            // 2 - 8
+            Gl.glVertex3f(6f, 6f, 0f);
+            Gl.glVertex3f(6f, 6f, 6f);
 
-            // 2 - 6
-            Gl.glVertex3f(5f, -3f, 0f);
-            Gl.glVertex3f(-5f, -3f, 0f);
+            // 3 - 5
+            //Gl.glVertex3f(0f, 0f, 0f);
+            //Gl.glVertex3f(0f, 0f, 8f);
 
-            // 3 - 4
-            Gl.glVertex3f(5f, 3f, 0f);
-            Gl.glVertex3f(5f, 0f, -4f);
+            // 4 - 5
+            Gl.glVertex3f(0f, 6f, 8f);
+            Gl.glVertex3f(0f, 0f, 8f);
 
-            // 3 - 7
-            Gl.glVertex3f(5f, 3f, 0f);
-            Gl.glVertex3f(-5f, 3f, 0f);
-
-            // 4 - 8
-            Gl.glVertex3f(5f, 0f, -4f);
-            Gl.glVertex3f(-5f, 0f, -4f);
+            // 4 - 7
+            Gl.glVertex3f(0f, 6f, 8f);
+            Gl.glVertex3f(3f, 6f, 8f);
 
             // 5 - 6
-            Gl.glVertex3f(-5f, 0f, 4f);
-            Gl.glVertex3f(-5f, -3f, 0f);
-
-            // 5 - 7
-            Gl.glVertex3f(-5f, 0f, 4f);
-            Gl.glVertex3f(-5f, 3f, 0f);
+            Gl.glVertex3f(0f, 0f, 8f);
+            Gl.glVertex3f(3f, 3f, 8f);
 
             // 6 - 7
-            Gl.glVertex3f(-5f, -3f, 0f);
-            Gl.glVertex3f(-5f, 3f, 0f);
+            Gl.glVertex3f(3f, 3f, 8f);
+            Gl.glVertex3f(3f, 6f, 8f);
 
             // 6 - 8
-            Gl.glVertex3f(-5f, -3f, 0f);
-            Gl.glVertex3f(-5f, 0f, -4f);
+            Gl.glVertex3f(3f, 3f, 8f);
+            Gl.glVertex3f(6f, 6f, 6f);
 
             // 7 - 8
-            Gl.glVertex3f(-5f, 3f, 0f);
-            Gl.glVertex3f(-5f, 0f, -4f);
+            Gl.glVertex3f(3f, 6f, 8f);
+            Gl.glVertex3f(6f, 6f, 6f);
 
             Gl.glEnd();
 
@@ -153,11 +141,10 @@ namespace lab6
             Gl.glViewport(0, 0, w, h);				
             Gl.glMatrixMode(Gl.GL_PROJECTION);	
             Gl.glLoadIdentity();
-            //Glu.gluPerspective(75f, (float)w / (float)h, 5f, 500.0f);
-            Gl.glOrtho(-8.0, 8.0, 8.0, -8.0, 1.0, 30.0);
+            Gl.glOrtho(-10f, 10f, 10f, -10f, 1f, 30f);
             Gl.glMatrixMode(Gl.GL_MODELVIEW);
             Gl.glLoadIdentity();
-            Glu.gluLookAt(rotLx, rotLy, 15.0f + rotLz, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+            Glu.gluLookAt(rotX, rotY, rotZ, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f);
         }
 
         private static void Keyboard(byte key, int x, int y)
@@ -210,12 +197,9 @@ namespace lab6
                     rotX = 0.0f;
                     rotY = 0.0f;
                     rotZ = 0.0f;
-                    rotLx = 0.0f;
-                    rotLy = 0.0f;
-                    rotLz = 0.0f;
                     Gl.glMatrixMode(Gl.GL_MODELVIEW);
                     Gl.glLoadIdentity();
-                    Glu.gluLookAt(rotLx, rotLy, 15.0f + rotLz, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+                    Glu.gluLookAt(rotX, rotY, rotZ, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f);
                     break;
             }
             Glut.glutPostRedisplay();	// Redraw the scene
@@ -237,24 +221,17 @@ namespace lab6
             Glut.glutPostRedisplay();		// Redraw the scene
         }
 
-        static void ProcessMouseWheel(int wheel, int direction, int x, int y)
-        {
-            Z += direction;  // Adjust the Z value 
-            Glut.glutPostRedisplay();
-        }
-
         static void Main(string[] args)
         {
             Glut.glutInit();        
             Glut.glutInitDisplayMode(Glut.GLUT_DOUBLE | Glut.GLUT_RGB);		   
-            Glut.glutInitWindowSize(600, 600);						              
+            Glut.glutInitWindowSize(800, 800);						              
             Glut.glutCreateWindow("Lab 6");
             Init();
             Glut.glutReshapeFunc(Reshape);
             Glut.glutDisplayFunc(Drawings);
             Glut.glutKeyboardFunc(new Glut.KeyboardCallback(Keyboard));
             Glut.glutSpecialFunc(new Glut.SpecialCallback(SpecialKey));
-            Glut.glutMouseWheelFunc(new Glut.MouseWheelCallback(ProcessMouseWheel));
             Glut.glutMainLoop();
         }
     }
