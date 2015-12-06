@@ -95,7 +95,7 @@ namespace lab6
         static void Init()
         {
             Gl.glShadeModel(Gl.GL_SMOOTH);                
-            Gl.glClearColor(0, 0, 0, 0.0f);               
+            Gl.glClearColor(1, 1, 1, 0.0f);               
             Gl.glClear(Gl.GL_COLOR_BUFFER_BIT | Gl.GL_DEPTH_BUFFER_BIT);    
             Gl.glClearDepth(1.0f);          
             Gl.glEnable(Gl.GL_DEPTH_TEST); 
@@ -108,7 +108,7 @@ namespace lab6
             Gl.glViewport(0, 0, w, h);				
             Gl.glMatrixMode(Gl.GL_PROJECTION);	
             Gl.glLoadIdentity();
-            Gl.glOrtho(-10f, 10f, 10f, -10f, 1f, 30f);
+            Gl.glOrtho(-7f, 7f, 7f, -7f, 1f, 30f);
             Gl.glMatrixMode(Gl.GL_MODELVIEW);
             Gl.glLoadIdentity();
             Glu.gluLookAt(rotX, rotY, rotZ, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f);

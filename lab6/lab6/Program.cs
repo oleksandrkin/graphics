@@ -31,7 +31,7 @@ namespace lab6
             {
                 rotX += 0.2f;
                 rotY += 0.2f;
-                rotZ += 0.2f;
+                rotZ += 0.0f;
             }
 
             Gl.glTranslatef(X, Y, Z);		
@@ -72,7 +72,7 @@ namespace lab6
             }
 
             Gl.glBegin(Gl.GL_LINES);
-            Gl.glColor3f(1.0f, 1.0f, 1.0f);
+            Gl.glColor3f(0f, 0f, 0f);
 
             // 1 - 2
             Gl.glVertex3f(5f, 0f, 4f);
@@ -140,7 +140,7 @@ namespace lab6
         static void Init()
         {
             Gl.glShadeModel(Gl.GL_SMOOTH);                
-            Gl.glClearColor(0, 0, 0, 0.0f);               
+            Gl.glClearColor(1, 1, 1, 0.0f);               
             Gl.glClear(Gl.GL_COLOR_BUFFER_BIT | Gl.GL_DEPTH_BUFFER_BIT);    
             Gl.glClearDepth(1.0f);          
             Gl.glEnable(Gl.GL_DEPTH_TEST); 

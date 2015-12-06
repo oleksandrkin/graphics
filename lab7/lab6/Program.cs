@@ -8,9 +8,9 @@ namespace lab6
         static float X = 0.0f;		
         static float Y = 0.0f;		
         static float Z = 0.0f;
-        static float rotX = 15f;
-        static float rotY = 15f;
-        static float rotZ = 15f;	
+        static float rotX = 0;//15f;
+        static float rotY = 0;//15f;
+        static float rotZ = 15;//15f;	
 
         static bool lines = true;      
         static bool rotation = false;   // Rotate if F2 is pressed   
@@ -25,7 +25,7 @@ namespace lab6
 
             if (rotation) 
             {
-                rotX += 0.2f;
+                rotX += 0.0f;
                 rotY += 0.2f;
                 rotZ += 0.2f;
             }
@@ -68,31 +68,31 @@ namespace lab6
             }
 
             Gl.glBegin(Gl.GL_LINES);
-            Gl.glColor3f(1.0f, 1.0f, 1.0f);
+            Gl.glColor3f(0f, 0f, 0f);
 
             // 1 - 2
             Gl.glVertex3f(0f, 6f, 0f);
             Gl.glVertex3f(6f, 6f, 0f);
 
             // 1 - 3
-            //Gl.glVertex3f(0f, 6f, 0f);
-            //Gl.glVertex3f(0f, 0f, 0f);
+            Gl.glVertex3f(0f, 6f, 0f);
+            Gl.glVertex3f(0f, 0f, 0f);
 
             // 1 - 4
             Gl.glVertex3f(0f, 6f, 0f);
             Gl.glVertex3f(0f, 6f, 8f);
 
             // 2 - 3
-            //Gl.glVertex3f(6f, 6f, 0f);
-            //Gl.glVertex3f(0f, 0f, 0f);
+            Gl.glVertex3f(6f, 6f, 0f);
+            Gl.glVertex3f(0f, 0f, 0f);
 
             // 2 - 8
             Gl.glVertex3f(6f, 6f, 0f);
             Gl.glVertex3f(6f, 6f, 6f);
 
             // 3 - 5
-            //Gl.glVertex3f(0f, 0f, 0f);
-            //Gl.glVertex3f(0f, 0f, 8f);
+            Gl.glVertex3f(0f, 0f, 0f);
+            Gl.glVertex3f(0f, 0f, 8f);
 
             // 4 - 5
             Gl.glVertex3f(0f, 6f, 8f);
@@ -128,7 +128,7 @@ namespace lab6
         static void Init()
         {
             Gl.glShadeModel(Gl.GL_SMOOTH);                
-            Gl.glClearColor(0, 0, 0, 0.0f);               
+            Gl.glClearColor(1, 1, 1, 0.0f);               
             Gl.glClear(Gl.GL_COLOR_BUFFER_BIT | Gl.GL_DEPTH_BUFFER_BIT);    
             Gl.glClearDepth(1.0f);          
             Gl.glEnable(Gl.GL_DEPTH_TEST); 
@@ -141,7 +141,7 @@ namespace lab6
             Gl.glViewport(0, 0, w, h);				
             Gl.glMatrixMode(Gl.GL_PROJECTION);	
             Gl.glLoadIdentity();
-            Gl.glOrtho(-10f, 10f, 10f, -10f, 1f, 30f);
+            Gl.glOrtho(-20f, 20f, 20f, -20f, 1f, 30f);
             Gl.glMatrixMode(Gl.GL_MODELVIEW);
             Gl.glLoadIdentity();
             Glu.gluLookAt(rotX, rotY, rotZ, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f);
